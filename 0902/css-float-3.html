@@ -24,10 +24,14 @@
             float: left;
             padding: 10px;
         }
-        .clearfix::after {
+        /* .clearfix::after {
             content: "";
             display: block;
             clear: both;
+        } */
+        .clearfix {
+            /* display: flow-root */
+            overflow: auto;
         }
     </style>
 </head>
