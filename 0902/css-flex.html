@@ -11,14 +11,18 @@
         }
         .container {
             width: 1200px;
-            height: 600px;
+            height: 1000px;
             margin: auto;
             display: flex;
             background-image: linear-gradient( 135deg, #FFF886 10%, #F072B6 100%);
-            justify-content: space-evenly;
+            justify-content: space-around;
             /* flex-start, flex-end, center, space-between, space-around, space-evenly */
-            align-items: baseline;
+            align-items: center;
             /* flex-start, flex-end, center, stretch, baseline */
+            flex-direction: row;
+            /* row, row-reverse, column, column-reverse*/
+            flex-wrap: wrap;
+            /* nowrap, wrap */
         }
         .box {
             width: calc(100% / 6);
@@ -31,13 +35,7 @@
 <body>
     <div class="container">
         <div class="box">
-            <h2>title</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi facilis itaque optio explicabo quibusdam ut ex atque voluptatum iste quaerat voluptate vero, consectetur fugiat alias vel ea dicta odit sit.
-            </p>
-        </div>
-        <div class="box">
-            <h2>title</h2>
+            <h2>title 1</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi facilis itaque optio explicabo quibusdam ut ex atque voluptatum iste quaerat voluptate vero, consectetur fugiat alias vel ea dicta odit sit.
             </p>
@@ -45,15 +43,22 @@
         <div class="box">
             <h2>title 2</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quibusdam sunt asperiores ratione dignissimos reprehenderit, nesciunt autem ut maiores aperiam quaerat itaque tempora minima adipisci pariatur molestias. A, dolores. Eos soluta voluptatibus, nihil accusamus blanditiis, ducimus tempore tempora iste sint possimus ratione fugiat quibusdam enim veniam reprehenderit incidunt porro non.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi facilis itaque optio explicabo quibusdam ut ex atque voluptatum iste quaerat voluptate vero, consectetur fugiat alias vel ea dicta odit sit.
             </p>
         </div>
         <div class="box">
             <h2>title 3</h2>
             <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quibusdam sunt asperiores ratione dignissimos reprehenderit, nesciunt autem ut maiores aperiam quaerat itaque tempora minima adipisci pariatur molestias. A, dolores. Eos soluta voluptatibus, nihil accusamus blanditiis, ducimus tempore tempora iste sint possimus ratione fugiat quibusdam enim veniam reprehenderit incidunt porro non.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 4</h2>
+            <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, qui, totam mollitia fuga voluptatem excepturi odit illum vero pariatur aspernatur quam. Quasi minima dolore error culpa, tenetur iusto nulla officiis.
             </p>
         </div>
+        
     </div>
 </body>
 </html>
