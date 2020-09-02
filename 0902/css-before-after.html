@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 虛擬元素 偽元素 */
+        h1::after {
+            content: "AFTER";
+        }
+        h1::before {
+            content: "BEFORE";
+        }
+        /* 
+            虛擬元素產生的元素為行內元素，位置會在標籤內
+         */
+    </style>
+</head>
+<body>
+    <h1>title</h1>
+</body>
+</html>

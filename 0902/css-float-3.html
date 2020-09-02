@@ -14,9 +14,9 @@
             margin-left: auto;
             margin-right: auto;
 
-            background-color: #159;
+            background-color: #b2d8ff;
             /* height: 300px; */
-            overflow: auto;
+            /* overflow: auto; */
             
         }
         .box {
@@ -24,10 +24,15 @@
             float: left;
             padding: 10px;
         }
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container clearfix">
         <div class="box">
             <h2>title</h2>
             <p>
@@ -40,12 +45,12 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, cumque iusto? Ullam a hic voluptate consectetur sunt atque officia laboriosam unde inventore optio minus nesciunt expedita beatae, accusantium necessitatibus praesentium! Ipsam quisquam eaque officia commodi optio libero culpa assumenda temporibus itaque est, dolore provident, fuga deserunt eveniet quae praesentium quas!
             </p>
         </div>
-        <div class="box">
+        <!-- <div class="box">
             <h2>title 3</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quia atque nam voluptatibus repellat at est vel et iste illo dolores temporibus a consequuntur fuga veniam optio, asperiores beatae illum.
             </p>
-        </div>
+        </div> -->
     </div>
 
 
