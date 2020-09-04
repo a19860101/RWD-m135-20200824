@@ -19,3 +19,17 @@ table {
 .clearfix {
     display: flow-root;
 }
+
+.t-left {
+    text-align: left;
+}
+.t-center {
+    text-align: center;
+}
+.t-right {
+    text-align: right;
+}
+.t-justify {
+    text-align: justify;
+}
+
