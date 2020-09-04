@@ -5,6 +5,9 @@
     padding: 0;
     border: 0;
 }
+img {
+    width: 100%;
+}
 table {
 	border-collapse: collapse;
 }

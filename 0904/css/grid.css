@@ -44,7 +44,7 @@
     flex:0 0 calc(100% / 12 * 11);
 }
 .col-12 {
-    width:0 0 calc(100% / 12 * 12);
+    flex:0 0 calc(100% / 12 * 12);
 }
 [class ^= "col"]{
     padding: 15px;
