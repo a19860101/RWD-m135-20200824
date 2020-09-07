@@ -82,4 +82,10 @@ header p {
     border: 1px solid #7e7e7e;
     padding: 12px;
     border-radius: 5px;
+    outline: 0;
+    transition: .3s;
+}
+.form-control:focus {
+    border-color: #ff4b5c;
+    background-color: #ffccd1;
 }
