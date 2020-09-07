@@ -41,9 +41,21 @@ header p {
     color: #ff4b5c;
 }
 /* service */
-#service {
+.service-top {
     background-image: linear-gradient( 135deg, #FFF886 10%, #F072B6 100%);
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
+.service-center {
+    background-image: linear-gradient( 135deg, #90F7EC 10%, #32CCBC 100%);    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.service-bottom {
+    background-image: linear-gradient( 135deg, #3C8CE7 10%, #00EAFF 100%);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+    
 #service .row {
     align-items: center;
 }
