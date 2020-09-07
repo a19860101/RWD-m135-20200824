@@ -89,3 +89,13 @@ header p {
     border-color: #ff4b5c;
     background-color: #ffccd1;
 }
+/* footer */
+footer {
+    background-color: #222222;
+    color: #eee;
+    font-size: 14px;
+}
+footer a {
+    color: #eee;
+    margin: 0 5px;
+}
