@@ -48,6 +48,7 @@ header p {
 }
 .service-center {
     background-image: linear-gradient( 135deg, #90F7EC 10%, #32CCBC 100%);    padding-top: 50px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 .service-bottom {
