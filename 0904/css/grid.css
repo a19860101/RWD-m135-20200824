@@ -10,6 +10,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
 .col-1 {
     flex:0 0 calc(100% / 12 * 1);
 }
@@ -54,3 +55,8 @@
  ^= 開頭
  $= 結尾
 */
+.no-padding > [class ^= "col"] {
+    padding: 0;
+}
+/* 子代 */
+

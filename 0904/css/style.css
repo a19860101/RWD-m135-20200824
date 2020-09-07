@@ -34,7 +34,6 @@ header p {
     margin: 20px 0;
 }
 #about p {
-    margin: 20px 0;
     padding: 0 15px;
 }
 #about .icon {
@@ -59,4 +58,7 @@ header p {
     
 #service .row {
     align-items: center;
+}
+#service h2 {
+    font-size: 32px;
 }
