@@ -68,6 +68,12 @@ header p {
     padding-top: 150px;
     padding-bottom: 150px;
 }
+#contact h2 {
+    font-size: 36px;
+}
+#contact.row {
+    align-items: center;
+}
 .form-group {
     margin-bottom: 25px;
 }
