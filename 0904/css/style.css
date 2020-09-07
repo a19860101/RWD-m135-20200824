@@ -62,3 +62,18 @@ header p {
 #service h2 {
     font-size: 32px;
 }
+
+/* contact */
+#contact {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.form-group {
+    margin-bottom: 25px;
+}
+.form-control {
+    width: 100%;
+    border: 1px solid #7e7e7e;
+    padding: 12px;
+    border-radius: 5px;
+}
