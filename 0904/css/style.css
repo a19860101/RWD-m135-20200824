@@ -1,6 +1,23 @@
 html,body {
     height: 100%;
 }
+/* nav */
+nav {
+    height: 60px;
+    line-height: 60px;
+    justify-content: space-between;
+    background-color: #222;
+}
+nav a {
+    text-decoration: none;
+    color: #eee;
+    display: inline-block;
+    padding: 0 15px;
+}
+nav .toggle-btn {
+    display: none;
+}
+/* header */
 header {
     background-color: #159;
     background-image: url("https://picsum.photos/id/46/1600/800");
