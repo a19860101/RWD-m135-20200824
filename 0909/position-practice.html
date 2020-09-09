@@ -16,6 +16,7 @@
             height: 600px;
         
             position: relative;
+            overflow: hidden;
         }
 
         .content {
@@ -35,10 +36,15 @@
 
             opacity: 0;
             transition: .3s;
+
+            /* transform: scale(0)rotate(180deg); */
+            transform: translateY(-100%)
         }
-        .content:hover {
+        .box:hover .content {
             opacity: 1;
-            background-color: rgba(155, 255, 25, 0.5);
+            background-color: rgba(117, 250, 40, 0.514);
+            /* transform: scale(1)rotate(0deg); */
+            transform: translateY(0)
         }
         .content h2 {
             font-size: 40px;
