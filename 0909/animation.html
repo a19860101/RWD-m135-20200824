@@ -11,13 +11,18 @@
             background-color: #fa0;
 
 
-            animation: go 5s;
+            animation: go2 5s;
         }
         @keyframes go{
             from {}
             to {
                 transform: translateX(500px)rotate(180deg);
             }
+        }
+        @keyframes go2{
+            0% {}
+            50% {transform: translateX(500px)rotate(180deg)}
+            100% {transform: translateX(500px)translateY(500px)rotate(360deg)}
         }
     </style>
 </head>
