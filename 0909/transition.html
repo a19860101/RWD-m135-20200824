@@ -10,17 +10,22 @@
             height: 150px;
             background-color: #115;
             position: relative;
-            /* transition: 3s; */
+            transition: width 1s 0s ,background-color 1s 1s;
 
-            transition-property: width;
+            
+            transition-property: width,background-color;
             transition-duration: 1s;
-            transition-delay: 0s;
-            transition-timing-function: linear;
+            transition-delay: 0s, 1s;
+            transition-timing-function: ease;
+            
             /* ease, ease-in, ease-out, ease-in-out, linear */
+
+
         }
 
         .box:hover {
             width: 800px;
+            background-color: #fa0;
         }
     </style>
 </head>
