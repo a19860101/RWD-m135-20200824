@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 200px;
+            height: 300px;
+
+            position: relative;
+            perspective: 800px;
+        }
+        .front {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient( 135deg, #52E5E7 10%, #130CB7 100%);
+            position: absolute;
+            transition: .5s;
+            transform-origin: left;
+        }
+        .back {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient( 135deg, #EECE13 10%, #B210FF 100%);
+            position: absolute;
+            transform: rotateY(300deg);
+            backface-visibility: hidden;
+            transition: .5s;
+            transform-origin: left;
+            opacity: 0;
+        }
+        .card:hover .front {
+            transform: rotateY(90deg);
+            opacity: 0;
+        }
+        .card:hover .back {
+            transform: rotateY(360deg);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="front">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet.
+            </p>
+        </div>
+        <div class="back">123</div>
+    </div>
+</body>
+</html>
