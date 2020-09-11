@@ -30,9 +30,12 @@
             background-color: #fe7171;
             border-radius: 50%;
             cursor: pointer;
+
+            transition:.3s;
         }
         .dots label:focus {
             background-color: #791818;
+            outline: 0;
         }
         #s1:checked ~ .gallery img:nth-of-type(1){
            opacity:1;
@@ -62,10 +65,10 @@
         <img src="https://picsum.photos/id/64/600/300" alt="">
     </div>
     <div class="dots">
-        <label for="s1"></label>
-        <label for="s2"></label>
-        <label for="s3"></label>
-        <label for="s4"></label>
+        <label for="s1" tabindex="0"></label>
+        <label for="s2" tabindex="0"></label>
+        <label for="s3" tabindex="0"></label>
+        <label for="s4" tabindex="0"></label>
     </div>
 </body>
 </html>
