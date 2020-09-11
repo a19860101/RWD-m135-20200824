@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #fa0;
+
+
+            /* animation: go2 5s; */
+            animation-name: go2;
+            animation-duration: 2s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-direction: alternate-reverse;
+            /* normal, reverse, alternate, alternate-reverse */
+            animation-timing-function: ease;
+            /* ease, ease-in, ease-out, ease-in-out, linear */
+        }
+        @keyframes go{
+            from {}
+            to {
+                transform: translateX(500px)rotate(180deg);
+            }
+        }
+        @keyframes go2{
+            0% {}
+            50% {transform: translateX(500px)rotate(180deg)}
+            100% {transform: translateX(500px)translateY(500px)rotate(360deg)}
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
