@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dots label {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: #fe7171;
+            border-radius: 50%
+        }
+        .gallery img {
+            opacity: 0;
+            position: absolute;
+            transition: .3s;
+        }
+        #s1:checked ~ .gallery img:nth-of-type(1){
+           opacity:1;
+        }
+        #s2:checked ~ .gallery img:nth-of-type(2){
+           opacity:1;
+        }
+        #s3:checked ~ .gallery img:nth-of-type(3){
+           opacity:1;
+        }
+        #s4:checked ~ .gallery img:nth-of-type(4){
+           opacity:1;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="radio" name="slider" id="s1" checked>
+    <input type="radio" name="slider" id="s2">
+    <input type="radio" name="slider" id="s3">
+    <input type="radio" name="slider" id="s4">
+
+    <div class="gallery">
+        <img src="https://picsum.photos/id/34/600/300" alt="">
+        <img src="https://picsum.photos/id/44/600/300" alt="">
+        <img src="https://picsum.photos/id/54/600/300" alt="">
+        <img src="https://picsum.photos/id/64/600/300" alt="">
+    </div>
+    <div class="dots">
+        <label for="s1"></label>
+        <label for="s2"></label>
+        <label for="s3"></label>
+        <label for="s4"></label>
+    </div>
+</body>
+</html>
