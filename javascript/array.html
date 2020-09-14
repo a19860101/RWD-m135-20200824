@@ -30,9 +30,23 @@
         //     console.log(a[i]);
         // }
 
-        a.forEach(function(data,idx){
-            console.log(data,idx);
-        })
+        // forEach
+        // a.forEach(function(data,idx){
+        //     console.log(data,idx);
+        // })
+
+        // for...in
+
+        for(data in a){
+            // console.log(a[data]);
+            console.log(data);
+        }
+
+        // for...of
+
+        for( data of a){
+            console.log(data);
+        }
 
 
 
