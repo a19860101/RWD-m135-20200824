@@ -9,16 +9,23 @@
     <script>
         const drinks = ['紅茶','綠茶','奶茶','珍珠奶茶','冰淇淋紅茶'];
 
-        drinks.push('蜂蜜綠茶');
-        drinks.pop();
+        // drinks.push('蜂蜜綠茶');
+        // drinks.pop();
 
-        drinks.unshift('蘋果紅茶');
-        drinks.shift();
+        // drinks.unshift('蘋果紅茶');
+        // drinks.shift();
 
-        drinks[drinks.length] = '蜂蜜綠茶';
-        drinks[drinks.length] = '蜂蜜紅茶';
+        // drinks[drinks.length] = '蜂蜜綠茶';
+        // drinks[drinks.length] = '蜂蜜紅茶';
 
+        //splice 拼接
+        // drinks.splice(1,1,'牛奶','黑糖珍珠');
+        drinks.splice(2,1);
+
+        
+        
         console.log(drinks);
+
     </script>
 </body>
 </html>
