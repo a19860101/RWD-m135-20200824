@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        let x = -65;
+        let x = '0';
         let y = 50;
 
         if(x > y){
@@ -42,6 +42,20 @@
                 break;
             default:
                 console.log('error');
+        }
+
+        switch(true){
+            case x > 0:
+                console.log('正數');
+                break;
+            case x < 0:
+                console.log('負數');
+                break;
+            case x === 0:
+                console.log(0);
+                break;
+            default: 
+                console.log('error 3');
         }
     </script>
 </body>
