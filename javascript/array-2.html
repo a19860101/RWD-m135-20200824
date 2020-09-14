@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const drinks = ['紅茶','綠茶','奶茶','珍珠奶茶','冰淇淋紅茶'];
+
+        drinks.push('蜂蜜綠茶');
+        drinks.pop();
+
+        drinks.unshift('蘋果紅茶');
+        drinks.shift();
+
+        drinks[drinks.length] = '蜂蜜綠茶';
+        drinks[drinks.length] = '蜂蜜紅茶';
+
+        console.log(drinks);
+    </script>
+</body>
+</html>
