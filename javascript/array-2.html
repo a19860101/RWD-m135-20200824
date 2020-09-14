@@ -8,6 +8,7 @@
 <body>
     <script>
         const drinks = ['紅茶','綠茶','奶茶','珍珠奶茶','冰淇淋紅茶'];
+        const desserts = ['提拉米蘇','奶酪'];
 
         // drinks.push('蜂蜜綠茶');
         // drinks.pop();
@@ -23,10 +24,13 @@
         // drinks.splice(2,1);
 
         //slice 切片
-        const drinks_slice = drinks.slice(2,4);
-        console.log(drinks_slice);
+        // const drinks_slice = drinks.slice(2,4);
+        // console.log(drinks_slice);
 
-        
+        //concat 合併
+        // const all = drinks.concat(desserts);
+        const all = desserts.concat(drinks);
+        console.log(all);
         
         console.log(drinks);
 
