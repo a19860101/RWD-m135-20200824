@@ -37,15 +37,20 @@
             },
         ]
         // console.log(drinks);
-        drinks.forEach(function(drink){
-            console.log(drink.name);
-            console.log(drink.price);
+        // drinks.forEach(function(drink){
+            // console.log(drink.name);
+            // console.log(drink.price);
+        // })
+        //物件解構
+        drinks.forEach(function({name,price}){
+            console.log(name);
+            console.log(price);
         })
 
-        for(drink of drinks){
-            console.log(drink.name);
-            console.log(drink.price);
-        }
+        // for(drink of drinks){
+        //     console.log(drink.name);
+        //     console.log(drink.price);
+        // }
     </script>
 </body>
 </html>
