@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function test(){
+        //     console.log('test');
+        // }
+        // test();
+
+        let test = () => {
+            return 'test';
+        }
+        console.log(test());
+
+        // let test2 = (x) => {
+        //     return x;
+        // }
+        // let test2 = x => {
+        //     return x;
+        // }
+        let test2 = x => x;
+        console.log(test2(100));
+
+        let test3 = x => {
+            let result = x * 30;
+            return result;
+        }
+        console.log(test3(100));
+
+        // let test4 = (x,y) => {
+        //     return x*y
+        // }
+        let test4 = (x,y) => x*y;
+        console.log(test4(11,30));
+
+        let test5 = () => 'hello';
+
+        console.log(test5());
+
+
+        const ary = ['apple','banana','cat'];
+
+        ary.forEach(function(data){
+            console.log(data);
+        })
+        ary.forEach((data) => {
+            console.log(data);
+        })
+        ary.forEach( data => {
+            console.log(data);
+        })
+
+    </script>
+</body>
+</html>
