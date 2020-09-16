@@ -6,8 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="test()">click</button>
-    <button id="btn">click 2</button>
+    <button onclick="test()">alert</button>
+    <button id="btn">change color</button>
+    <p id="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae facilis incidunt, ratione laudantium harum minima voluptatum quisquam dignissimos, libero fugit veritatis nulla aliquam eos itaque cum, quos fuga quas. Tempora.
+    </p>
     <script>
         function test(){
             alert('Hello Javascript!');
@@ -19,7 +22,11 @@
         // }
         
         document.getElementById('btn').onclick = () => {
-            alert("Hello Arrow Function!!!");
+            // alert("Hello Arrow Function!!!");
+            let content = document.getElementById('content');
+            content.style.color = 'red';
+            content.style.backgroundColor = '#159';
+            content.style.padding = '15px';
         }
 
         //監聽
