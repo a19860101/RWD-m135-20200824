@@ -8,22 +8,26 @@
 <body>
     <script>
         //匿名
-
         //自訂
-        function test(){
-            let x = 100;
-            console.log(x);
-        }
-
+        // 函式宣告式 ->具有提升性
+        // function test(){
+        //     let x = 100;
+        //     console.log(x);
+        // }
         // test();
+        //函式表達式
         let hello = function(){
             let x = 'hello world!!!';
             console.log(x);
         }
-        hello();
-        hello();
-        hello();
-        hello();
+        // hello()
+
+        function test(x,y){
+            console.log(x+y);
+        } 
+        test(10,15);
+
+
     </script>
 </body>
 </html>
