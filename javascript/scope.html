@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //scope
+        /*
+        var -> function scope
+        let,const -> block scope
+        */
+
+        // function test(){
+        //     var x = 100;
+        //     let y = 999;
+        //     console.log('內 var',x);
+        //     console.log('內 let',y);
+        // }
+        // console.log('外 var',x);
+        // console.log('外 let',y);
+        // test();
+        let i = 1;
+        if(i){
+            var x = 100;
+            let y = 999;
+            console.log('內 var',x);
+            console.log('內 let',y);
+        }
+        console.log('外 var',x);
+        let y = 666;
+        console.log('外 let',y);
+    </script>
+</body>
+</html>
