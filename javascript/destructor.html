@@ -7,17 +7,32 @@
 </head>
 <body>
     <script>
-        //解構
+        //物件解構
         const obj = {
             name:'John',
             mail: 'asdf@gmail.com'
         }
         // console.log(obj.name);
         // console.log(obj.mail);
-        const {name,mail} = obj;
-        console.log(name);
-        console.log(mail);
+        // const {name,mail} = obj;
+        // console.log(name);
+        // console.log(mail);
 
+        //物件解構別名
+        const {name:n,mail:m} = obj;
+        console.log(n);
+        console.log(m);
+
+        //陣列解構
+        const drinks = ['紅茶','綠茶','奶茶','珍珠奶茶','冰淇淋紅茶'];
+
+        // const [red,green,milk] = drinks;
+        // console.log(red);
+        // console.log(green);
+        // console.log(milk);
+
+        const [,,,bubble] = drinks;
+        console.log(bubble); 
     </script>
 </body>
 </html>
