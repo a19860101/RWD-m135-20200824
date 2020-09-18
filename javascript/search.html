@@ -22,19 +22,34 @@
         <li>iPhone 11</li>
         <li>iPhone SE</li>
         <li>iPhone XR</li>
+        <li>防毒軟體</li>
     </ul> 
     <script>
+        //區分大小寫
         function search(){
             let search_text = document.querySelector('#search').value;
+            console.log(search_text);
             let li = document.querySelectorAll('li');
             for(data of li){
-                if(data.textContent.indexOf(search_text) > -1){
+                if(data.textContent.toUpperCase().indexOf(search_text.toUpperCase()) > -1){
                     data.style.display = '';
                 }else{
                     data.style.display = 'none';
                 }
             }
         }
+        //不區分大小寫
+        // function search(){
+        //     let search_text = document.querySelector('#search').value;
+        //     let li = document.querySelectorAll('li');
+        //     for(data of li){
+        //         if(data.textContent.indexOf(search_text) > -1){
+        //             data.style.display = '';
+        //         }else{
+        //             data.style.display = 'none';
+        //         }
+        //     }
+        // }
     </script>
 </body>
 </html>
