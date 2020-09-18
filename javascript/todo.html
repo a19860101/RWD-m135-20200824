@@ -62,12 +62,22 @@
             //appendChild 加入子節點
 
         }
-        let lists = document.querySelectorAll('.list');
-        for(list of lists){
-            list.onclick = function(e){
-                console.log(e.target);
+        // let lists = document.querySelectorAll('.list');
+        // for(list of lists){
+        //     list.onclick = function(e){
+        //         e.target.classList.toggle('complete');
+        //     }
+        // }
+        document.body.onclick = function(e){
+            // console.log(e.target.className.indexOf('list'));
+            if(e.target.className.indexOf('list') > -1){
+                e.target.classList.toggle('complete');
+                // console.log('a')
             }
         }
+
+        let s = 'hello world';
+        console.log(s.indexOf('a'));
     </script>
 </body>
 </html>
