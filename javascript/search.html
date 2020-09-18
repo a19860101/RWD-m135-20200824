@@ -26,7 +26,14 @@
     <script>
         function search(){
             let search_text = document.querySelector('#search').value;
-            console.log(search_text);
+            let li = document.querySelectorAll('li');
+            for(data of li){
+                if(data.textContent.indexOf(search_text) > -1){
+                    data.style.display = '';
+                }else{
+                    data.style.display = 'none';
+                }
+            }
         }
     </script>
 </body>
