@@ -19,12 +19,12 @@
     </ul>
     <a href="#">Link</a>
     <script>
-        let content = document.getElementById('content');
-        console.log(content);
-        let list = document.getElementsByClassName('list');
-        console.log(list);
-        let link = document.getElementsByTagName('a');
-        console.log(link);
+        // let content = document.getElementById('content');
+        // console.log(content);
+        // let list = document.getElementsByClassName('list');
+        // console.log(list);
+        // let link = document.getElementsByTagName('a');
+        // console.log(link);
 
         // for(let i=0;i<list.length;i++){
         //     console.log(list[i]);
@@ -32,12 +32,33 @@
         // for(data in list){
         //     console.log(data);
         // }
-        for(data of list){
+        // for(data of list){
+        //     console.log(data);
+        // }
+        // for(data of link){
+        //     console.log(data);
+        // }
+
+        let title = document.querySelector('#title');
+        console.log(title);
+        let lists = document.querySelectorAll('.list');
+        console.log(lists);
+        let links = document.querySelectorAll('a');
+        console.log(links);
+
+        // for(let i=0;i<lists.length;i++){
+        //     console.log(lists[i]);
+        // }
+        // for(data in lists){
+        //     console.log(data);
+        // }
+        // for(data of links){
+        //     console.log(data);
+        // }
+        links.forEach(data=>{
             console.log(data);
-        }
-        for(data of link){
-            console.log(data);
-        }
+        })
+
     </script>
 </body>
 </html>
