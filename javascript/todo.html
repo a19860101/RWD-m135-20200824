@@ -6,6 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text">
+    <input type="text" id="input">
+    <button onclick="add()">新增</button>
+    <ul>
+        <li>洗衣服</li>
+        <li>遛狗</li>
+    </ul>
+    <script>
+        function add(){
+            let input = document.querySelector('#input').value;
+            console.log(input);
+            let ul = document.querySelector('ul');
+            console.log(ul);
+            let li = document.createElement('li');
+            li.append(input);
+            ul.append(li);
+        }
+
+    </script>
 </body>
 </html>
