@@ -7,7 +7,7 @@
 </head>
 <body>
     <input type="text" id="input">
-    <button onclick="add()">新增</button>
+    <button onclick="add2()">新增</button>
     <ul>
         <li>洗衣服</li>
         <li>遛狗</li>
@@ -21,6 +21,19 @@
             let li = document.createElement('li');
             li.append(input);
             ul.append(li);
+            //append 加入子元素
+        }
+
+        function add2(){
+            let input = document.querySelector('#input').value;
+            let ul = document.querySelector('ul');
+            let li = document.createElement('li');
+            let textNode = document.createTextNode(input);
+
+            ul.appendChild(li);
+            li.appendChild(textNode);
+            //appendChild 加入子節點
+
         }
 
     </script>
