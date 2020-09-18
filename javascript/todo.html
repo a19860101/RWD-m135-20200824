@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 15px;
+        }
+        .list {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            padding: 15px;
+            background-image: linear-gradient( 135deg, #FFF886 10%, #F072B6 100%);
+
+        }
+    </style>
 </head>
 <body>
     <input type="text" id="input">
-    <button onclick="add2()">新增</button>
+    <button onclick="add()">新增</button>
     <ul>
-        <li>洗衣服</li>
-        <li>遛狗</li>
+        <li class="list">洗衣服</li>
+        <li class="list">遛狗</li>
     </ul>
     <script>
         function add(){
@@ -22,6 +39,12 @@
             li.append(input);
             ul.append(li);
             //append 加入子元素
+
+            document.querySelector('#input').value = '';
+
+            //加入類別
+            // li.className = 'list'
+            li.classList.add('list');
         }
 
         function add2(){
