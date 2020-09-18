@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">title</h1>
+    <p id="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quas consequatur magnam tempora quod nam illo vitae qui inventore, ducimus voluptatibus autem beatae temporibus iste nemo, ut rerum pariatur eum.
+    </p>
+    <a href="#">more</a>
+    <ul id="lists">
+        <li class="list">list 1</li>
+        <li class="list">list 2</li>
+        <li class="list">list 3</li>
+        <li class="list">list 4</li>
+    </ul>
+    <a href="#">Link</a>
+    <script>
+        let content = document.getElementById('content');
+        console.log(content);
+        let list = document.getElementsByClassName('list');
+        console.log(list);
+        let link = document.getElementsByTagName('a');
+        console.log(link);
+    </script>
+</body>
+</html>
