@@ -20,6 +20,10 @@
             background-image: linear-gradient( 135deg, #FFF886 10%, #F072B6 100%);
 
         }
+        li.complete {
+            background-image: linear-gradient( 135deg, #757575 10%, #82a2c8 100%);
+            text-decoration: line-through;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +31,7 @@
     <button onclick="add()">新增</button>
     <ul>
         <li class="list">洗衣服</li>
-        <li class="list">遛狗</li>
+        <li class="list complete">遛狗</li>
     </ul>
     <script>
         function add(){
@@ -58,7 +62,12 @@
             //appendChild 加入子節點
 
         }
-
+        let lists = document.querySelectorAll('.list');
+        for(list of lists){
+            list.onclick = function(e){
+                console.log(e.target);
+            }
+        }
     </script>
 </body>
 </html>
