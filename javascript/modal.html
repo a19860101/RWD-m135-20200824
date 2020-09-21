@@ -10,7 +10,9 @@
         }
         .modal.active {
             display: block;
+            animation: fade-in .6s ;
         }
+
         .modal-overlay {
             background-color: rgba(0,0,0,.8);
             width: 100%;
@@ -26,6 +28,9 @@
             position: relative;
             padding: 30px;
             border-radius: 5px;
+        }
+        @keyframes fade-in {
+            from {opacity: 0;}
         }
     </style>
 </head>
