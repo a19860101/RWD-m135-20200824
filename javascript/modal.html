@@ -30,8 +30,8 @@
     </style>
 </head>
 <body>
-    <a href="#" class="modal-btn">about</a>
-    <a href="#" class="modal-btn">service</a>
+    <a href="#" class="modal-btn" data-target="#about">about</a>
+    <a href="#" class="modal-btn" data-target="#service">service</a>
     <div class="modal" id="about">
         <div class="modal-overlay"></div>
         <div class="modal-container">
@@ -65,5 +65,16 @@
             </div>
         </div>
     </div>
+    <script>
+        let modal_btn = document.querySelectorAll('.modal-btn');
+        for(mb of modal_btn){
+            mb.onclick = e => {
+                let target = e.target.dataset.target;
+                // console.log(target);
+                document.querySelector(target).classList.add('active');
+            }
+        }
+
+    </script>
 </body>
 </html>
