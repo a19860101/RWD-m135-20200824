@@ -64,5 +64,16 @@
             </p>
         </div>
     </div>
+    <script>
+        let tab_link = document.querySelectorAll('.tab-link');
+        for(tlink of tab_link){
+            tlink.onclick = function(e){
+                for(tlink of tab_link){
+                    tlink.classList.remove('active');
+                }
+                e.target.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
