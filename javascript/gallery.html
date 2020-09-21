@@ -11,6 +11,7 @@
         .thumb {
             width: 100px;
             border: 1px solid #000;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -25,5 +26,17 @@
             <img src="images/5050005_500.jpg" class="thumb">
         </div>
     </div>
+    <script>
+        let thumb = document.querySelectorAll('.thumb');
+        for(th of thumb){
+            th.onclick = function(e){
+                // console.log(e.target);
+                // let newImg = e.target.src;
+                let newImg = e.target.getAttribute('src');
+
+                document.querySelector('.picture').setAttribute('src',newImg);
+            }
+        }
+    </script>
 </body>
 </html>
