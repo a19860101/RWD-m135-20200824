@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI";
+        }
+        .tabs {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-nav {
+            background-color: #ddd;
+        }
+        .tab-link {
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            color: #000;
+        }
+        .tab-link.active {
+            background-color: #bbb;
+        }
+        .tab-panel {
+            padding: 10px;
+            background-color: #bbb;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab-nav">
+            <a href="#" class="tab-link active">Tab 1</a>
+            <a href="#" class="tab-link">Tab 2</a>
+            <a href="#" class="tab-link">Tab 3</a>
+        </div>
+        <div id="tab-1" class="tab-panel active">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio veritatis quis maiores earum voluptatibus blanditiis voluptas incidunt corporis harum perspiciatis impedit, ut vitae ipsum a labore sit ratione magnam vero.
+            </p>
+        </div>
+        <div id="tab-1" class="tab-panel">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe porro nemo vitae? Voluptatem aliquid sunt facilis. Distinctio facere nihil quod quos doloribus tenetur nisi voluptatem illo tempore consequatur asperiores recusandae debitis veniam voluptatibus ex laborum officiis error culpa nobis, quidem voluptate minima accusantium? Fugit deleniti nobis voluptas nihil dignissimos.
+            </p>
+        </div>
+        <div id="tab-1" class="tab-panel">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est quibusdam nulla fugit illum, at tempore consequuntur esse recusandae beatae dicta consequatur sit neque voluptates aut. Consectetur ab exercitationem officia distinctio quisquam explicabo nemo suscipit nisi, ipsum odit praesentium molestiae eveniet!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
