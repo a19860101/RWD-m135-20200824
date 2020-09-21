@@ -44,7 +44,7 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <a href="#">Close</a>
+                <a href="#" class="modal-close">Close</a>
             </div>
         </div>
     </div>
@@ -61,7 +61,7 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <a href="#">Close</a>
+                <a href="#" class="modal-close">Close</a>
             </div>
         </div>
     </div>
@@ -72,6 +72,18 @@
                 let target = e.target.dataset.target;
                 // console.log(target);
                 document.querySelector(target).classList.add('active');
+            }
+        }
+
+        let close = document.querySelectorAll('.modal-close');
+        for(c of close){
+            c.onclick = e => {
+                console.log(e.target);
+                // e.target.parentElement.parentElement.parentElement.classList.remove('active');
+                let modal = document.querySelectorAll('.modal');
+                for(m of modal){
+                    m.classList.remove('active');
+                }
             }
         }
 
