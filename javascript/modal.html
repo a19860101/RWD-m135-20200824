@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal {
+            display: none;
+        }
+        .modal.active {
+            display: block;
+        }
+        .modal-overlay {
+            background-color: rgba(0,0,0,.8);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .modal-container {
+            width: 60%;
+            margin: 20% auto 0;
+            background-color: #fff;
+            position: relative;
+            padding: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="modal-btn">about</a>
+    <a href="#" class="modal-btn">service</a>
+    <div class="modal" id="about">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>About</h2>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore, soluta aliquid debitis nostrum voluptatum, ad natus vel rerum tenetur sunt voluptatibus maiores fugiat laudantium fugit hic aut excepturi necessitatibus.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="service">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Service</h2>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore, soluta aliquid debitis nostrum voluptatum, ad natus vel rerum tenetur sunt voluptatibus maiores fugiat laudantium fugit hic aut excepturi necessitatibus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore, soluta aliquid debitis nostrum voluptatum, ad natus vel rerum tenetur sunt voluptatibus maiores fugiat laudantium fugit hic aut excepturi necessitatibus.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
