@@ -33,7 +33,7 @@
     <a href="#" class="modal-btn" data-target="#about">about</a>
     <a href="#" class="modal-btn" data-target="#service">service</a>
     <div class="modal" id="about">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
             <div class="modal-header">
                 <h2>About</h2>
@@ -75,14 +75,38 @@
             }
         }
 
-        let close = document.querySelectorAll('.modal-close');
-        for(c of close){
-            c.onclick = e => {
-                console.log(e.target);
-                // e.target.parentElement.parentElement.parentElement.classList.remove('active');
+        // let close = document.querySelectorAll('.modal-close');
+        // for(c of close){
+        //     c.onclick = e => {
+        //         console.log(e.target);
+        //         // e.target.parentElement.parentElement.parentElement.classList.remove('active');
+        //         let modal = document.querySelectorAll('.modal');
+        //         for(m of modal){
+        //             m.classList.remove('active');
+        //         }
+        //     }
+        // }
+
+        document.onclick = e => {
+            // if(e.target.className === 'modal-close'){
+            //     let modal = document.querySelectorAll('.modal');
+            //     for(m of modal){
+            //        m.classList.remove('active');
+            //     }
+            // }
+
+            // if(e.target.className === 'modal-close'|| e.target.className === 'modal-overlay'){
+            //     let modal = document.querySelectorAll('.modal');
+            //     for(m of modal){
+            //        m.classList.remove('active');
+            //     }
+            // }
+
+            console.log(e.target.className.indexOf('modal-close'));
+            if(e.target.className.indexOf('modal-close') > -1){
                 let modal = document.querySelectorAll('.modal');
                 for(m of modal){
-                    m.classList.remove('active');
+                   m.classList.remove('active');
                 }
             }
         }
