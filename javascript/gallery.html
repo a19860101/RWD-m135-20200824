@@ -12,6 +12,10 @@
             width: 100px;
             border: 1px solid #000;
             cursor: pointer;
+            transition: .3s;
+        }
+        .thumb.active {
+            border: 1px solid #fcd601;
         }
     </style>
 </head>
@@ -19,7 +23,7 @@
     <div class="gallery">
         <img src="images/5050001_500.jpg" class="picture">
         <div class="thumbs">
-            <img src="images/5050001_500.jpg" class="thumb">
+            <img src="images/5050001_500.jpg" class="thumb active">
             <img src="images/5050002_500.jpg" class="thumb">
             <img src="images/5050003_500.jpg" class="thumb">
             <img src="images/5050004_500.jpg" class="thumb">
@@ -35,6 +39,11 @@
                 let newImg = e.target.getAttribute('src');
 
                 document.querySelector('.picture').setAttribute('src',newImg);
+
+                for(th of thumb){
+                    th.classList.remove('active');
+                }
+                e.target.classList.add('active');
             }
         }
     </script>
