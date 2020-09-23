@@ -15,13 +15,20 @@
         <div>
             {{ input }} / {{ gender }}
         </div>
+        <div>
+            <input type="checkbox" name="onsale" v-model="onsale">
+            <div>{{ onsale }}</div>
+        </div>
+        <h2 v-if="onsale">跳樓大拍賣!!!</h2>
+        <h2 v-else>原價</h2>
     </div>    
     <script>
         Vue.createApp({
             data(){
                 return {
                     input: 'hello',
-                    gender: '女'
+                    gender: '女',
+                    onsale: true
                 }
             }
         }).mount('#app')
