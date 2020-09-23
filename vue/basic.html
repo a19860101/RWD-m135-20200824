@@ -17,6 +17,10 @@
 <body>
     <div id="app">
         <h1 v-bind:class="titleColor">{{ title }}</h1>
+
+        <h1 v-if="onsale">特價</h1>
+        <h1 v-else>原價</h1>
+        
         <p>
             {{ content }}
         </p>
@@ -44,6 +48,7 @@
         Vue.createApp({
             data(){
                 return {
+                    onsale: false,
                     title: 'Hello VUE!',
                     content: '12345 上山打老虎',
                     link: 'https://tw.yahoo.com',
