@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="input">
+        <input type="radio" name="gender" value="男" v-model="gender">
+        <input type="radio" name="gender" value="女" v-model="gender">
+        <div>
+            {{ input }} / {{ gender }}
+        </div>
+    </div>    
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    input: 'hello',
+                    gender: '女'
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
