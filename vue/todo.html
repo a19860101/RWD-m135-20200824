@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="input"><button v-on:click="add()">新增</button>
+        <ul>
+            <li v-for="todo in todos">{{todo}}</li>
+        </ul>
+    </div>    
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    input:'',
+                    todos:[
+                        '吃飯',
+                        '睡覺',
+                        '打咚咚'
+                    ]
+                }
+            },
+            methods:{
+                add(){  
+                    if(this.input === ''){
+                        alert('請輸入資料!!');
+                        return 
+                    }
+                    this.todos.push(this.input);
+                    this.input = '';
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
