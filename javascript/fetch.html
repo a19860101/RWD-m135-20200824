@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container" id="books">
+
+    </div>
     <script>
         let url = 'data.json';
         fetch('data.json')
@@ -17,6 +20,11 @@
             for(d of data){
                 console.log(d.title);
                 console.log(d.price);
+                let books = document.querySelector('#books');
+                let div = document.createElement('div');
+                div.append(d.title);
+                div.append(d.price);
+                books.append(div);
             }
         })
 
