@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let url = 'data.json';
+        fetch('data.json')
+        .then(function(res){
+            return res.json();
+        })
+        .then(function(data){
+            // console.log(data);
+            for(d of data){
+                console.log(d.title);
+                console.log(d.price);
+            }
+        })
+
+    </script>
+</body>
+</html>
