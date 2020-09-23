@@ -5,20 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .red {
+            color: #f00;
+        }
+        .green {
+            color: #5eff00
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <h1>{{ title }}</h1>
+        <h1 v-bind:class="titleColor">{{ title }}</h1>
         <p>
             {{ content }}
         </p>
+        <a v-bind:href="link">Yahoo</a>
     </div>
     <script>
         Vue.createApp({
             data(){
                 return {
                     title: 'Hello VUE!',
-                    content: '12345 上山打老虎'
+                    content: '12345 上山打老虎',
+                    link: 'https://tw.yahoo.com',
+                    titleColor: 'green'
                 }
             }
         }).mount('#app');
