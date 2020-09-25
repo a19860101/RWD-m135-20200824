@@ -20,15 +20,18 @@
 </head>
 <body>
     <div id="app">
-        <h2>{{ title }}</h2>
+        <h2>{{ title }} -- {{showColorName}}</h2>
         <img :src="img">
         <div>
             <span 
                 v-for="(v,idx) in variants" 
                 class="colorBox" 
                 :style="{backgroundColor:v.color}"
-                @click="changeColor(idx)"
+                @click="changeIndex(idx)"
                 ></span>
+        </div>
+        <div>
+            剩餘數量: {{qty}}
         </div>
         <div>
             產品說明
@@ -42,17 +45,15 @@
                 <li v-for="n in notice">{{ n }}</li>
             </ul>
         </div>
-        <div>
-            數量
-        </div>
+
         <a href="#">加入購物車</a>
     </div>
     <script>
         Vue.createApp({
             data(){
-                return {
+                return {  
                     title:'毛球針織帽-女',
-                    img: 'images/5050001_500.jpg',
+                    // img: 'images/5050001_500.jpg',
                     notice:[
                         '※ 因拍攝燈光效果可能造成色差，請以實品顏色為準。',
                         '※ 深淺色衣物請分開洗滌；請勿長時間浸泡、濕放，以防染色。',
@@ -63,7 +64,6 @@
                         '主布:棉60%、聚酯纖維40%',
                         '羅紋:棉58%、聚酯纖維38%、彈性纖維4%'
                     ],
-
                     variants: [
                         {
                             id: 5050001,
@@ -100,14 +100,32 @@
                             color: '#000000',
                             colorName: '黑色'
                         }
-                    ]
+                    ],
+                    selectedIndex:0,
                 }
             },
             methods:{
-                changeColor(idx){
-                    console.log(this.variants[idx].img);
-                    this.img = this.variants[idx].img;
-                    
+                // changeColor(idx){
+                //     console.log(this.variants[idx].img);
+                //     this.img = this.variants[idx].img;
+            
+                // },
+                changeIndex(idx){
+                    this.selectedIndex = idx;
+                }
+            },
+            computed:{
+                currentIdx(){
+                    return this.variants[this.selectedIndex]
+                },
+                img(){
+                    return this.currentIdx.img;
+                },
+                qty(){
+                    return this.currentIdx.qty;
+                },
+                showColorName(){
+                    return this.currentIdx.colorName;
                 }
             }
         }).mount('#app');
