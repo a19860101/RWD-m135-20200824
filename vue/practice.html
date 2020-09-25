@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        .colorBox {
+            border: 1px solid #000;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin: 5px;
+            position: relative;
+        }
 
+    </style>
 </head>
 <body>
     <div id="app">
         <h2>{{ title }}</h2>
         <img :src="img">
         <div>
-            色彩
+            <span v-for="v in variants" class="colorBox" :style="{background:v.color}"></span>
         </div>
         <div>
             產品說明
@@ -52,28 +63,28 @@
                             id: 5050001,
                             img: 'images/5050001_500.jpg',
                             qty: 2,
-                            color: ,
+                            color: '#f8edba',
                             colorName: '杏色'
                         },
                         {
                             id: 5050002,
                             img: 'images/5050002_500.jpg',
                             qty:3,
-                            color: ,
+                            color: '#d4a3a3',
                             colorName: '灰粉'
                         },
                         {
                             id: 5050003,
                             img: 'images/5050003_500.jpg',
                             qty: 8,
-                            color: ,
+                            color: '#dfbc23',
                             colorName: '復古黃'
                         },
                         {
                             id: 5050004,
                             img: 'images/5050004_500.jpg',
                             qty: 0,
-                            color: ,
+                            color: '#1a1a1a',
                             colorName: '深麻灰'
                         },
                         {
