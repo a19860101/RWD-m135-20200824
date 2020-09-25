@@ -22,7 +22,7 @@
         Vue.createApp({
             data(){
                 return {
-                    yen: 0
+                    yen: 0,
                 }
             },
             computed:{
@@ -31,10 +31,10 @@
                 // }
                 nt:{
                     get(){
-                        return parseInt(this.yen * 0.28);
+                        return Math.round(this.yen * 0.28);
                     },
                     set(v){
-                        this.yen =v / 0.28 ;
+                        this.yen = Math.round(v / 0.28) ;
                     }
                 }
             }
