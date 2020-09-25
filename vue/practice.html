@@ -9,8 +9,8 @@
 </head>
 <body>
     <div id="app">
-        <h2>產品名稱</h2>
-        <img src="https://picsum.photos/id/15/400" alt="">
+        <h2>{{ title }}</h2>
+        <img :src="img">
         <div>
             色彩
         </div>
@@ -35,6 +35,8 @@
         Vue.createApp({
             data(){
                 return {
+                    title:'毛球針織帽-女',
+                    img: 'images/5050001_500.jpg',
                     notice:[
                         '※ 因拍攝燈光效果可能造成色差，請以實品顏色為準。',
                         '※ 深淺色衣物請分開洗滌；請勿長時間浸泡、濕放，以防染色。',
@@ -44,6 +46,43 @@
                         '產地:中國',
                         '主布:棉60%、聚酯纖維40%',
                         '羅紋:棉58%、聚酯纖維38%、彈性纖維4%'
+                    ],
+                    variants: [
+                        {
+                            id: 5050001,
+                            img: 'images/5050001_500.jpg',
+                            qty: 2,
+                            color: ,
+                            colorName: '杏色'
+                        },
+                        {
+                            id: 5050002,
+                            img: 'images/5050002_500.jpg',
+                            qty:3,
+                            color: ,
+                            colorName: '灰粉'
+                        },
+                        {
+                            id: 5050003,
+                            img: 'images/5050003_500.jpg',
+                            qty: 8,
+                            color: ,
+                            colorName: '復古黃'
+                        },
+                        {
+                            id: 5050004,
+                            img: 'images/5050004_500.jpg',
+                            qty: 0,
+                            color: ,
+                            colorName: '深麻灰'
+                        },
+                        {
+                            id: 5050005,
+                            img: 'images/5050005_500.jpg',
+                            qty: 2,
+                            color: '#000000',
+                            colorName: '黑色'
+                        }
                     ]
                 }
             }
