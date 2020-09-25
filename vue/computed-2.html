@@ -15,8 +15,7 @@
         </div>
         <div>
             台幣
-            <!-- <input type="text"> -->
-            {{nt}}
+            <input type="text" v-model="nt">
         </div>        
     </div>
     <script>
@@ -27,8 +26,16 @@
                 }
             },
             computed:{
-                nt(){
-                    return parseInt(this.yen * 0.28);
+                // nt(){
+                //     return parseInt(this.yen * 0.28);
+                // }
+                nt:{
+                    get(){
+                        return parseInt(this.yen * 0.28);
+                    },
+                    set(v){
+                        this.yen =v / 0.28 ;
+                    }
                 }
             }
         }).mount('#app')
