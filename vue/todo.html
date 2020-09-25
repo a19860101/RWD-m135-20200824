@@ -5,14 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
-
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Gill Sans MT";
+        }
+        #app {
+            width: 600px;
+            margin: auto;
+        }
+        .list {
+            list-style: none;
+            padding: 10px;
+            background-color: #ffd57e;
+            border-bottom: 1px solid #000;
+        }
+        .del {
+            float: right;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
         <input type="text" v-model="input"><button v-on:click="add()">新增</button>
-        <ul>
-            <li v-for="(todo,idx) in todos" v-on:click="del(idx)">
-                {{todo.id}}--{{todo.title}}--{{todo.complete}} 
+        <ul class="lists">
+            <li v-for="(todo,idx) in todos" class="list">
+                {{todo.title}}
+                <a href="#"  v-on:click="del(idx)" class="del">刪除</a>
             </li>
         </ul>
     </div>    
