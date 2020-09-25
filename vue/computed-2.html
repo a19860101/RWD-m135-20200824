@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div>
+            日幣
+            <input type="text" v-model="yen">
+        </div>
+        <div>
+            台幣
+            <!-- <input type="text"> -->
+            {{nt}}
+        </div>        
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    yen: 0
+                }
+            },
+            computed:{
+                nt(){
+                    return parseInt(this.yen * 0.28);
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
