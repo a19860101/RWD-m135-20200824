@@ -23,7 +23,12 @@
         <h2>{{ title }}</h2>
         <img :src="img">
         <div>
-            <span v-for="v in variants" class="colorBox" :style="{background:v.color}"></span>
+            <span 
+                v-for="(v,idx) in variants" 
+                class="colorBox" 
+                :style="{backgroundColor:v.color}"
+                @click="changeColor(idx)"
+                ></span>
         </div>
         <div>
             產品說明
@@ -58,6 +63,7 @@
                         '主布:棉60%、聚酯纖維40%',
                         '羅紋:棉58%、聚酯纖維38%、彈性纖維4%'
                     ],
+
                     variants: [
                         {
                             id: 5050001,
@@ -95,6 +101,12 @@
                             colorName: '黑色'
                         }
                     ]
+                }
+            },
+            methods:{
+                changeColor(idx){
+                    console.log(this.variants[idx].img);
+                    
                 }
             }
         }).mount('#app');
