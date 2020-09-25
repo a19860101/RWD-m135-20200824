@@ -25,13 +25,18 @@
         .del {
             float: right;
         }
+        .list.complete {
+            text-decoration: line-through;
+            background: #ccc;
+            color: #444;
+        }
     </style>
 </head>
 <body>
     <div id="app">
         <input type="text" v-model="input"><button v-on:click="add()">新增</button>
         <ul class="lists">
-            <li v-for="(todo,idx) in todos" class="list">
+            <li v-for="(todo,idx) in todos" class="list" v-bind:class="{complete: todo.completed}">
                 {{todo.title}}
                 <a href="#"  v-on:click="del(idx)" class="del">刪除</a>
             </li>
@@ -46,17 +51,17 @@
                         {
                             id:1,
                             title:'吃飯',
-                            complete: false
+                            completed: false
                         },
                         {
                             id:2,
                             title:'睡覺',
-                            complete: false
+                            completed: false
                         },
                         {
                             id:3,
                             title:'打咚咚',
-                            complete: false
+                            completed: true
                         },
                     ]
                 }
