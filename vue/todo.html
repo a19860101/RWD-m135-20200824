@@ -36,8 +36,13 @@
     <div id="app">
         <input type="text" v-model="input"><button v-on:click="add()">新增</button>
         <ul class="lists">
-            <li v-for="(todo,idx) in todos" class="list" v-bind:class="{complete: todo.completed}">
+            <li v-for="(todo,idx) in todos" 
+                class="list" 
+                v-bind:class="{complete: todo.completed}" 
+                @click=" todo.completed = !todo.completed">
+                
                 {{todo.title}}
+                
                 <a href="#"  v-on:click="del(idx)" class="del">刪除</a>
             </li>
         </ul>
@@ -82,6 +87,14 @@
                 del(idx){
                     // console.log(idx)
                     this.todos.splice(idx,1);
+                },
+                complete(idx){
+                    // if( this.todos[idx].completed === false){
+                    //     this.todos[idx].completed = true
+                    // }else{
+                    //     this.todos[idx].completed = false
+                    // }
+                    this.todos[idx].completed = !this.todos[idx].completed;
                 }
             }
         }).mount('#app');
