@@ -11,16 +11,8 @@
     <div id="app">
         <h1>組件</h1>
         <my-cpn></my-cpn>
-        <my-cpn></my-cpn>
-        <my-cpn></my-cpn>
-        <my-cpn></my-cpn>
-        <my-cpn></my-cpn>
         <my-cpn-2></my-cpn-2>
-        <my-cpn-2></my-cpn-2>
-        <my-cpn-2></my-cpn-2>
-        <my-cpn-2></my-cpn-2>
-        <my-cpn-2></my-cpn-2>
-        <my-cpn-2></my-cpn-2>
+        <test123></test123>
     </div>
     <template id="my-component">
         <h1>HELLO Component!!</h1>
@@ -28,14 +20,25 @@
     <template id="my-component-2">
         <h1>HELLO 組件!!!</h1>
     </template>
+    <template id="test">
+        <h1>HELLO TEST!!!!</h1>
+    </template>
     <script>
+        const test = {
+            template:'#test'
+        }
         const app = Vue.createApp({
             data(){
                 return {
 
                 }
+            },
+            //區域註冊組件
+            components: {
+                'test123': test
             }
         });
+        //全域註冊組件
         app.component('my-cpn',{
             template:'#my-component'
         });
