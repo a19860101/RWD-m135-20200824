@@ -34,6 +34,10 @@
             剩餘數量: {{qty}}
         </div>
         <div>
+            <span v-if="qty > 0">熱賣中</span>
+            <span v-else>缺貨中</span>
+        </div>
+        <div>
             產品說明
             <ul>
                 <li v-for="d in desc">{{ d }}</li>
