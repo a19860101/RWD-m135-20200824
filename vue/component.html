@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <h1>組件</h1>
+        <my-cpn></my-cpn>
+        <my-cpn></my-cpn>
+        <my-cpn></my-cpn>
+        <my-cpn></my-cpn>
+        <my-cpn></my-cpn>
+        <my-cpn-2></my-cpn-2>
+        <my-cpn-2></my-cpn-2>
+        <my-cpn-2></my-cpn-2>
+        <my-cpn-2></my-cpn-2>
+        <my-cpn-2></my-cpn-2>
+        <my-cpn-2></my-cpn-2>
+    </div>
+    <template id="my-component">
+        <h1>HELLO Component!!</h1>
+    </template>
+    <template id="my-component-2">
+        <h1>HELLO 組件!!!</h1>
+    </template>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+
+                }
+            }
+        });
+        app.component('my-cpn',{
+            template:'#my-component'
+        });
+        app.component('my-cpn-2',{
+            template:'#my-component-2'
+        })
+        app.mount('#app');
+
+        // Vue.createApp({
+        // }).component('my-component',{
+        //     template:'#my-component'
+        // }).mount('#app');
+    </script>
+</body>
+</html>
