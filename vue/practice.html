@@ -15,7 +15,9 @@
             margin: 5px;
             position: relative;
         }
-
+        .disabledBtn {
+            background-color: #f00;
+        }
     </style>
 </head>
 <body>
@@ -51,7 +53,7 @@
             </ul>
         </div>
 
-        <button :disabled="!qty">加入購物車</button>
+        <button :disabled="!qty" :class="{disabledBtn: !qty}">加入購物車</button>
     </div>
     <script>
         Vue.createApp({
