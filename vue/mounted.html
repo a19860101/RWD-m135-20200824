@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div v-for="book in books">
+            <h2>{{book.title}}</h2>
+            <p>{{book.price}}</p>
+        </div>
+    </div>    
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    books:[],
+                    title:'hello'
+                }
+            },
+            mounted(){
+                // fetch('data.json')
+                // .then(function(res){
+                //     return res.json();
+                // })
+                // .then(function(data){
+                //     // this.books = data;
+                //     console.log(this);
+                // })
+                fetch('data.json')
+                .then( res => res.json())
+                .then( data => {
+                    this.books = data;
+                    // console.log(this.title);
+                })
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
