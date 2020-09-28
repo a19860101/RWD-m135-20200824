@@ -34,8 +34,9 @@
             剩餘數量: {{qty}}
         </div>
         <div>
-            <span v-if="qty > 0">熱賣中</span>
-            <span v-else>缺貨中</span>
+            <span v-if="qty > 5">熱賣中</span>
+            <span v-else-if="qty > 0">低庫存</span>
+            <span v-else>缺貨捕貨中</span>
         </div>
         <div>
             產品說明
