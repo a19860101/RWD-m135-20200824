@@ -7,16 +7,22 @@
     <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <h2>今日天氣:{{  }}</h2>
+        <div>體感溫度:{{w}}</div>
+    </div>
     <script>
         Vue.createApp({
             data(){
-                return {}
+                return {
+                    w:''
+                }
             },
             mounted(){
-                fetch('https://api.openweathermap.org/data/2.5/weather?q=Taipei&appid=b1ecbccd638b763d489602917ba47cc3')
+                fetch('https://api.openweathermap.org/data/2.5/weather?q=Taipei&appid=b1ecbccd638b763d489602917ba47cc3&units=metric&lang=zh_tw')
                 .then(res => res.json())
                 .then( data => {
+                    this.w = data;
                     console.log(data);
                 })
             }
