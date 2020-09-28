@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>今日天氣 {{w.weather[0].description}}</h2>
+        <div>
+            體感溫度 {{ w.main.temp }}&deg;C / 濕度{{w.main.humidity}}
+        </div>
+        <div>
+            最高溫 {{w.main.temp_max}}&deg;C / 最低溫 {{w.main.temp_min}}&deg;C
+        </div>
+        <div>
+            {{ new Date(w.dt * 1000) }}
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                w:[]
+            },
+            mounted(){
+                fetch('https://api.openweathermap.org/data/2.5/weather?q=Taipei&appid=b1ecbccd638b763d489602917ba47cc3&units=metric&lang=zh_tw')
+                .then(res => res.json())
+                .then( data => {
+                    this.w = data
+                    console.log(data);
+                })
+            }
+        })
+    </script>
+</body>
+</html>
