@@ -10,8 +10,11 @@
 <body>
     <div id="app">
         <div v-for="data in w">
-            <h2>天氣</h2>
-            <div>體感溫度 {{data.main}}</div>
+            <div>時間 {{data.dt_txt}}</div>
+            <h2>天氣 {{data.weather[0].description}}</h2>
+            <div>體感溫度 {{data.main.feels_like}}</div>
+            <div>最高溫 {{data.main.temp_max}} - 最低溫 {{data.main.temp_min}}</div>
+            <hr>
         </div>
     </div>
     <script>
@@ -31,7 +34,7 @@
                     }
                 })
                 .then( res => {
-                    this.w = res.data;
+                    this.w = res.data.list;
                     console.log(res.data.list)
                 })
             }
