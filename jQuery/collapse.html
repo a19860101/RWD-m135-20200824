@@ -22,6 +22,8 @@
         p {
             padding: 10px;
             background-color: #eee;
+
+            display: none;
         }
     </style>
 </head>
@@ -40,14 +42,14 @@
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem sequi eligendi ipsum eaque quas natus consectetur reprehenderit aspernatur fugit velit.
         </p>
         <h2>title 4</h2>
-        <p>
+        <p> 
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vitae repellat repudiandae placeat sequi dolorem laborum veniam fugit quisquam animi eum explicabo sapiente illum possimus, voluptatem ad, molestiae eius optio.
         </p>
     </div>
     <script>
         $(function(){
             $('h2').click(function(){
-                $('p').toggle();
+                $(this).next().toggle(300);
             })
         })
     </script>
