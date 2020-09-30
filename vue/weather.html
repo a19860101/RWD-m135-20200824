@@ -8,15 +8,16 @@
 </head>
 <body>
     <div id="app">
-        <pre>
-            {{w}}
-        </pre>
         <div v-for="(value,key,idx) in w">
             <template v-if="key === 'weather'">
                 <h2>今日天氣 {{value[0].description}}</h2>
+                <img :src="`http://openweathermap.org/img/wn/${value[0].icon}@2x.png`" alt="">
             </template>
             <template v-if="key === 'main'">
-                平均溫度 {{value.temp}}&deg;C                
+                <div>平均溫度 {{value.temp}}&deg;C</div>
+                <div>體感溫度 {{value.feels_like}}&deg;C</div>
+                <div>最高溫 {{value.temp_max}}&deg;C</div>
+                <div>最低溫 {{value.temp_min}}&deg;C</div>
             </template>
         </div>
     </div>
@@ -28,8 +29,8 @@
                 }
             },
             mounted(){
-                // fetch('https://api.openweathermap.org/data/2.5/weather?q=Taipei&appid=b1ecbccd638b763d489602917ba47cc3&units=metric&lang=zh_tw')
-                fetch('weather.json')
+                fetch('https://api.openweathermap.org/data/2.5/weather?q=bangkok&appid=b1ecbccd638b763d489602917ba47cc3&units=metric&lang=zh_tw')
+                // fetch('weather.json')
                 .then(res => res.json())
                 .then( data => {
                     this.w = data;
