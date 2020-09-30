@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-for="data in w">
+            <h2>天氣</h2>
+            <div>體感溫度 {{data.main}}</div>
+        </div>
+    </div>
+    <script>
+        const app=Vue.createApp({
+            data(){
+                return {
+                    w:[]
+                }
+            },
+            mounted(){
+                axios.get('https://api.openweathermap.org/data/2.5/forecast',{
+                    params:{
+                        q:'Taipei',
+                        appid:'b1ecbccd638b763d489602917ba47cc3',
+                        units:'metric',
+                        lang:'zh_tw'
+                    }
+                })
+                .then( res => {
+                    this.w = res.data;
+                    console.log(res.data.list)
+                })
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
