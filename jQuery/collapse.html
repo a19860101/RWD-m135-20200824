@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            font-family: "Gill Sans MT";
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+        h2 {
+            background-image: linear-gradient( 135deg, #FFF6B7 10%, #F6416C 100%);
+            padding: 10px;
+        }
+        p {
+            padding: 10px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sit dolore, corrupti distinctio ratione corporis cum blanditiis vero ullam nisi culpa, enim doloremque, ea cupiditate optio possimus quos mollitia! Error.
+        </p>
+        <h2>title 2</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod in beatae dicta est iste, voluptates autem omnis. Nobis, excepturi natus similique quis impedit nihil molestias quas rerum delectus? Repellat, earum? Natus eaque a maxime praesentium magnam accusantium magni vitae iure possimus, similique quaerat, odit tempore tempora itaque iste!
+        </p>
+        <h2>title 3</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem sequi eligendi ipsum eaque quas natus consectetur reprehenderit aspernatur fugit velit.
+        </p>
+        <h2>title 4</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vitae repellat repudiandae placeat sequi dolorem laborum veniam fugit quisquam animi eum explicabo sapiente illum possimus, voluptatem ad, molestiae eius optio.
+        </p>
+    </div>
+    <script>
+        $(function(){
+            $('h2').click(function(){
+                $('p').toggle();
+            })
+        })
+    </script>
+</body>
+</html>
