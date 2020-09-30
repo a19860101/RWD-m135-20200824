@@ -9,9 +9,17 @@
 </head>
 <body>
     <div id="app">
+        <select name="" id="city" v-model="city" @change="weather()">
+            <option value="">--請選擇--</option>
+            <option value="Taipei">台北</option>
+            <option value="Tokyo">東京</option>
+            <option value="Seoul">首爾</option>
+            <option value="Bangkok">曼谷</option>
+        </select>
         <div v-for="data in w">
             <div>時間 {{data.dt_txt}}</div>
             <h2>天氣 {{data.weather[0].description}}</h2>
+            <img :src="`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`" alt="">
             <div>體感溫度 {{data.main.feels_like}}</div>
             <div>最高溫 {{data.main.temp_max}} - 最低溫 {{data.main.temp_min}}</div>
             <hr>
@@ -21,22 +29,25 @@
         const app=Vue.createApp({
             data(){
                 return {
-                    w:[]
+                    w:[],
+                    city:''
                 }
             },
-            mounted(){
-                axios.get('https://api.openweathermap.org/data/2.5/forecast',{
-                    params:{
-                        q:'Taipei',
-                        appid:'b1ecbccd638b763d489602917ba47cc3',
-                        units:'metric',
-                        lang:'zh_tw'
-                    }
-                })
-                .then( res => {
-                    this.w = res.data.list;
-                    console.log(res.data.list)
-                })
+            methods:{
+                weather(){
+                    axios.get('https://api.openweathermap.org/data/2.5/forecast',{
+                        params:{
+                            q: this.city,
+                            appid:'b1ecbccd638b763d489602917ba47cc3',
+                            units:'metric',
+                            lang:'zh_tw'
+                        }
+                    })
+                    .then( res => {
+                        this.w = res.data.list;
+                        console.log(res.data.list)
+                    })
+                }
             }
         }).mount('#app')
     </script>
