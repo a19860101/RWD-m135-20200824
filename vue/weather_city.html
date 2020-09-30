@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <select name="" id="city" v-model="city" @change="weather()">
+            <option value="">--請選擇--</option>
+            <option value="Taipei">台北</option>
+            <option value="Tokyo">東京</option>
+            <option value="Seoul">首爾</option>
+            <option value="Bangkok">曼谷</option>
+        </select>
+        <div>{{city}}</div>
+        <div v-for="(value,key,idx) in w">
+            <template v-if="key === 'weather'">
+                <h2>今日天氣 {{value[0].description}}</h2>
+                <img :src="`http://openweathermap.org/img/wn/${value[0].icon}@2x.png`" alt="">
+            </template>
+            <template v-if="key === 'main'">
+                <div>平均溫度 {{value.temp}}&deg;C</div>
+                <div>體感溫度 {{value.feels_like}}&deg;C</div>
+                <div>最高溫 {{value.temp_max}}&deg;C</div>
+                <div>最低溫 {{value.temp_min}}&deg;C</div>
+            </template>
+        </div>
+    </div>
+    <script>
+        const app=Vue.createApp({
+            data(){
+                return {
+                    w:[],
+                    city:''
+                }
+            },
+            methods:{
+                weather(){
+                    axios.get('https://api.openweathermap.org/data/2.5/weather',{
+                        params:{
+                            q:this.city,
+                            appid:'b1ecbccd638b763d489602917ba47cc3',
+                            units:'metric',
+                            lang:'zh_tw'
+                        }
+                    })
+                    .then( res => {
+                        this.w = res.data;
+                    })
+                }
+            },
+        }).mount('#app')
+    </script>
+</body>
+</html>
