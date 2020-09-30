@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
     <style>
         * {
             font-family: "Gill Sans MT";
@@ -28,29 +29,38 @@
         h2.active {
             background-color: #0278ae;
         }
+        h2 i {
+            float: right;
+            transition: .3s;
+        }
+        h2.active i {
+            transform: rotate(225deg)
+        }
         p {
             padding: 10px;
             background-color: #eee;
 
             display: none;
         }
+       
+        
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>title</h2>
+        <h2>title<i class="fas fa-plus"></i></h2>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sit dolore, corrupti distinctio ratione corporis cum blanditiis vero ullam nisi culpa, enim doloremque, ea cupiditate optio possimus quos mollitia! Error.
         </p>
-        <h2>title 2</h2>
+        <h2>title 2<i class="fas fa-plus"></i></h2>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod in beatae dicta est iste, voluptates autem omnis. Nobis, excepturi natus similique quis impedit nihil molestias quas rerum delectus? Repellat, earum? Natus eaque a maxime praesentium magnam accusantium magni vitae iure possimus, similique quaerat, odit tempore tempora itaque iste!
         </p>
-        <h2>title 3</h2>
+        <h2>title 3<i class="fas fa-plus"></i></h2>
         <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem sequi eligendi ipsum eaque quas natus consectetur reprehenderit aspernatur fugit velit.
         </p>
-        <h2>title 4</h2>
+        <h2>title 4<i class="fas fa-plus"></i></h2>
         <p> 
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vitae repellat repudiandae placeat sequi dolorem laborum veniam fugit quisquam animi eum explicabo sapiente illum possimus, voluptatem ad, molestiae eius optio.
         </p>
