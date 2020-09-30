@@ -8,31 +8,34 @@
 </head>
 <body>
     <div id="app">
-        <h2>今日天氣 
-            -- <span v-for="{description} in w.weather">{{description}}</span>
-        </h2>
-        <div>
-            體感溫度 {{ w.main }}
-        </div>
-        <div>
-            {{ new Date(w.dt * 1000) }}
+        <pre>
+            {{w}}
+        </pre>
+        <div v-for="(value,key,idx) in w">
+            <template v-if="key === 'weather'">
+                <h2>今日天氣 {{value[0].description}}</h2>
+            </template>
+            <template v-if="key === 'main'">
+                平均溫度 {{value.temp}}&deg;C                
+            </template>
         </div>
     </div>
     <script>
-        Vue.createApp({
+        const app=Vue.createApp({
             data(){
                 return {
                     w:[]
                 }
             },
             mounted(){
-                fetch('https://api.openweathermap.org/data/2.5/weather?q=Taipei&appid=b1ecbccd638b763d489602917ba47cc3&units=metric&lang=zh_tw')
+                // fetch('https://api.openweathermap.org/data/2.5/weather?q=Taipei&appid=b1ecbccd638b763d489602917ba47cc3&units=metric&lang=zh_tw')
+                fetch('weather.json')
                 .then(res => res.json())
                 .then( data => {
-                    this.w = data
+                    this.w = data;
                     console.log(data);
                 })
-            }
+            },
         }).mount('#app')
     </script>
 </body>
