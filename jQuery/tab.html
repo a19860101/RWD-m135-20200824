@@ -76,10 +76,13 @@
                 // console.log(href);
                 // $(href).addClass('active');
 
-                
+
                 let target = $(this).data('target');
-                $('.tab-panel').removeClass('active');
-                $(target).addClass('active')
+                // $('.tab-panel').removeClass('active');
+                // $(target).addClass('active')
+                $('.tab-panel').hide();
+                $(target).fadeIn();
+                // $(target).slideDown();
             })
         })
 
