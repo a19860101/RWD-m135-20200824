@@ -56,6 +56,7 @@
             position: fixed;
             right: 30px;
             bottom: 30px;
+            display: none;
         }
     </style>
 </head>
@@ -87,6 +88,15 @@
                     scrollTop: 0
                 })
             })
+            $(window).scroll(function(){
+                let h = $(this).scrollTop();
+                console.log(h);
+                if(h > 650){
+                    $('#gotop').show();
+                }else{
+                    $('#gotop').hide();
+                }
+            });
         })
     </script>
 </body>
