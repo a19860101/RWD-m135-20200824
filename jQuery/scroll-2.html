@@ -89,8 +89,8 @@
                 })
                 e.preventDefault();
                 
-                $('nav').find('a').removeClass('active');
-                $(this).addClass('active');
+                // $('nav').find('a').removeClass('active');
+                // $(this).addClass('active');
             })
             $('#gotop').click(function(e){
                 $('html,body').animate({
@@ -109,6 +109,15 @@
                     // $('#gotop').hide();
                     $('#gotop').fadeOut();
                 }
+                $('nav').find('a').each(function(){
+                    console.log($(this));
+                    let target = $(this).data('target');
+                    let offset = $(target).offset().top;
+                    if( h >= offset-200){
+                        $('nav').find('a').removeClass('active');
+                        $(this).addClass('active')
+                    }
+                })
             });
         })
     </script>
