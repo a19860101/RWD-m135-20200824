@@ -74,7 +74,7 @@
     <a href="#" id="gotop">TOP</a>
     <script>
         $(function(){
-            $('nav').find('a').click(function(){
+            $('nav').find('a').click(function(e){
                 // console.log($(this).data('target'));
                 let target = $(this).data('target');
                 let top = $(target).offset().top;
@@ -82,19 +82,24 @@
                 $('html,body').animate({
                     scrollTop: top
                 })
+                e.preventDefault();
             })
-            $('#gotop').click(function(){
+            $('#gotop').click(function(e){
                 $('html,body').animate({
                     scrollTop: 0
                 })
+                // return false;
+                e.preventDefault();
             })
             $(window).scroll(function(){
                 let h = $(this).scrollTop();
                 console.log(h);
                 if(h > 650){
-                    $('#gotop').show();
+                    // $('#gotop').show();
+                    $('#gotop').fadeIn();
                 }else{
-                    $('#gotop').hide();
+                    // $('#gotop').hide();
+                    $('#gotop').fadeOut();
                 }
             });
         })
