@@ -18,11 +18,16 @@
             line-height: 60px;
             text-align: center;
             background-color: #222;
+            position: fixed;
         }
         nav a {
             color: #fff;
             margin: 0 10px;
             text-decoration: none;
+            display: inline-block;
+        }
+        nav a.active {
+            color: #e72760;
         }
         #about {
             width: 100%;
@@ -62,7 +67,7 @@
 </head>
 <body>
     <nav>
-        <a href="#" data-target="#about">about</a>
+        <a href="#" data-target="#about" class="active">about</a>
         <a href="#" data-target="#service">service</a>
         <a href="#" data-target="#product">product</a>
         <a href="#" data-target="#contact">contact</a>
@@ -83,6 +88,9 @@
                     scrollTop: top
                 })
                 e.preventDefault();
+                
+                $('nav').find('a').removeClass('active');
+                $(this).addClass('active');
             })
             $('#gotop').click(function(e){
                 $('html,body').animate({
