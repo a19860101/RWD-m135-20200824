@@ -44,7 +44,19 @@
             height: 100vh;
             background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
         }
-
+        #gotop {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #222;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+        }
     </style>
 </head>
 <body>
@@ -58,6 +70,7 @@
     <div id="service"></div>
     <div id="product"></div>
     <div id="contact"></div>
+    <a href="#" id="gotop">TOP</a>
     <script>
         $(function(){
             $('nav').find('a').click(function(){
@@ -67,6 +80,11 @@
                 // console.log(top);
                 $('html,body').animate({
                     scrollTop: top
+                })
+            })
+            $('#gotop').click(function(){
+                $('html,body').animate({
+                    scrollTop: 0
                 })
             })
         })
