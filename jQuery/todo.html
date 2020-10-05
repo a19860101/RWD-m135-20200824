@@ -49,6 +49,12 @@
                 $('ul').append(content);
                 $('#input').val('');
             })
+            $(document).on('click','.list',function(){
+                $(this).toggleClass('complete')
+            })
+            $(document).on('click','.delete',function(){
+                $(this).parent().remove();
+            })
         })
     </script>
 </body>
