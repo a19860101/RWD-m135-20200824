@@ -15,14 +15,24 @@
     </style>
 </head>
 <body>
-    <a href="https://picsum.photos/id/68/1600/1200" data-lightbox="g">
+    <a href="https://picsum.photos/id/68/1600/1200" data-lightbox="g" data-title="港口">
         <img src="https://picsum.photos/id/68/1600/1200" alt="">
     </a>
-    <a href="https://picsum.photos/id/48/1600/1200" data-lightbox="g">
+    <a href="https://picsum.photos/id/48/1600/1200" data-lightbox="g" data-title="MacBook">
         <img src="https://picsum.photos/id/48/1600/1200" alt="">
     </a>
-    <a href="https://picsum.photos/id/28/1600/1200" data-lightbox="g">
+    <a href="https://picsum.photos/id/28/1600/1200" data-lightbox="g" data-title="森林">
         <img src="https://picsum.photos/id/28/1600/1200" alt="">
     </a>
+    <script>
+        lightbox.option({
+            albumLabel: '%1 / %2',
+            showImageNumberLabel: false,
+            fadeDuration:400,
+            imageFadeDuration:400,
+            resizeDuration:600,
+            maxWidth: 800,
+        })
+    </script>
 </body>
 </html>
