@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <style>
@@ -15,6 +16,17 @@
         }
         img {
             width: 100%;
+        }
+        button {
+            outline: 0
+        }
+        .owl-theme .owl-nav [class*=owl-] {
+            color: #69d100!important;
+            text-decoration: none;
+        }
+        .owl-theme .owl-nav [class*=owl-]:hover {
+            background: transparent;
+            color: #da0049!important;
         }
     </style>
 </head>
@@ -44,7 +56,8 @@
                 // center: true,
                 // stagePadding: 100,
                 margin:50,
-                nav: true
+                nav: true,
+                navText:['<i class="fas fa-chevron-circle-left fa-2x"></i>','<i class="fas fa-chevron-circle-right fa-2x"></i>']
             });
         })
 
