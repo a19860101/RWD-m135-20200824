@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <style>
         header {
             width: 1000px;
@@ -17,13 +20,22 @@
 </head>
 <body>
     <header>
-        <div id="slider">
+        <div id="slider" class="owl-carousel">
             <img src="https://picsum.photos/id/56/1200/600" alt="">
             <img src="https://picsum.photos/id/26/1200/600" alt="">
             <img src="https://picsum.photos/id/16/1200/600" alt="">
             <img src="https://picsum.photos/id/36/1200/600" alt="">
             <img src="https://picsum.photos/id/46/1200/600" alt="">
+            <img src="https://picsum.photos/id/66/1200/600" alt="">
+            <img src="https://picsum.photos/id/76/1200/600" alt="">
+            <img src="https://picsum.photos/id/87/1200/600" alt="">
         </div>
     </header>
+    <script>
+        $(function(){
+            $('#slider').owlCarousel();
+        })
+
+    </script>
 </body>
 </html>
