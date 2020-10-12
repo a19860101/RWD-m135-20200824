@@ -33,7 +33,13 @@
     </header>
     <script>
         $(function(){
-            $('#slider').owlCarousel();
+            $('#slider').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout:3000,
+                autoplaySpeed:2000
+            });
         })
 
     </script>
