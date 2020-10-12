@@ -44,7 +44,10 @@
         $(function(){
             $('#addBtn').click(function(){
                 let input = $('#input').val();
-                console.log(input);
+                if(input === ''){
+                    alert('請輸入內容');
+                    return;
+                }
                 let content = `<li class="list">${input}<span class="delete">刪除</span></li>`;
                 $('ul').append(content);
                 $('#input').val('');
