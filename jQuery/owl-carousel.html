@@ -61,18 +61,34 @@
     <script>
         $(function(){
             $('#slider').owlCarousel({
-                items: 1,
                 loop: true,
                 autoplay: false,
                 autoplayTimeout:4000,
                 autoplaySpeed:2000,
-                dots: true,
+                
                 dotsSpeed:800 ,
                 // center: true,
-                stagePadding: 200,
+                // stagePadding: 200,
                 margin:0,
-                nav: true,
-                navText:['<i class="fas fa-chevron-circle-left fa-2x"></i>','<i class="fas fa-chevron-circle-right fa-2x"></i>']
+               
+                navText:['<i class="fas fa-chevron-circle-left fa-2x"></i>','<i class="fas fa-chevron-circle-right fa-2x"></i>'],
+                responsive:{
+                    0: {
+                        items: 1,
+                        dots: false,
+                        nav: false,
+                    },
+                    800: {
+                        items: 3,
+                        dots: true,
+                        nav: false,
+                    },
+                    1600: {
+                        items: 4,
+                        dots: true,
+                        nav: true,
+                    }
+                }
             });
         })
 
