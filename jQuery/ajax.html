@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <div class="container">
+
+    </div>
     <script>
         $(function () {
             $.ajax({
@@ -23,6 +26,14 @@
                 dataType: 'json',
                 success(data){
                     console.log(data);
+                    let content = `
+                        <h2>今日天氣 ${data.weather[0].description}</h2>
+                        <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
+                        <div>體感溫度:${data.main.feels_like}</div>
+                        <div>最高溫${data.main.temp_max}最低溫${data.main.temp_min}</div>
+
+                    `;
+                    $('.container').append(content);
                 },
                 error(){
                     console.log('error');
