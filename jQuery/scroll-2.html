@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css">
     <style>
         * {
             margin: 0;
@@ -86,56 +88,57 @@
     </nav>
     <div id="about">
         <div class="fixed-width row">
-            <div class="col-6">
+            <div class="col-6 wow fadeInLeft">
                 <h1>title</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, facilis sunt corporis praesentium dignissimos fuga adipisci deserunt fugiat? Ad pariatur expedita accusantium aut ipsum magni quasi commodi consequatur praesentium aperiam?
                 </p>
                 <a href="#">more</a>
             </div>
-            <div class="col-6">
+            <div class="col-6 wow fadeInRight">
                 <img src="https://picsum.photos/id/69/600" alt="">
             </div>
         </div>
     </div>
     <div id="service">
         <div class="fixed-width row">
-            <div class="col-4">
+            <div class="col-4 wow fadeInLeft">
                 <img src="https://picsum.photos/id/19/600" alt="">
             </div>
-            <div class="col-4">
+            <div class="col-4 wow fadeInUp">
                 <img src="https://picsum.photos/id/29/600" alt="">
             </div>
-            <div class="col-4">
+            <div class="col-4 wow fadeInRight">
                 <img src="https://picsum.photos/id/39/600" alt="">
             </div>
         </div>
     </div>
     <div id="product">
         <div class="fixed-width row">
-            <div class="col-3">
+            <div class="col-3 wow zoomIn">
                 <img src="https://picsum.photos/id/12/600" alt="">
             </div>
-            <div class="col-3">
+            <div class="col-3 wow zoomIn">
                 <img src="https://picsum.photos/id/22/600" alt="">
             </div>
-            <div class="col-3">
+            <div class="col-3 wow zoomIn">
                 <img src="https://picsum.photos/id/32/600" alt="">
             </div>
-            <div class="col-3">
+            <div class="col-3 wow zoomIn">
                 <img src="https://picsum.photos/id/42/600" alt="">
             </div>
         </div>
     </div>
     <div id="contact">
         <div class="fixed-width row">
-            <div class="col-12">
+            <div class="col-12 wow rollIn">
                 <img src="https://picsum.photos/id/63/1200/600" alt="">
             </div>
         </div>
     </div>
     <a href="#" id="gotop">TOP</a>
     <script>
+        new WOW().init();
         $(function(){
             $('nav').find('a').click(function(e){
                 // console.log($(this).data('target'));
