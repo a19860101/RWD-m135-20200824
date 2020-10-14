@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.min.js"></script>
     <style>
         img {
             width: 300px;
+            vertical-align: top;
         }
+        .zoom {
+			display:inline-block;
+			position: relative;
+		}
     </style>
 </head>
+
 <body>
     <div>
-        <a href="https://picsum.photos/id/35/1200/800">
+        <span class='zoom'>
             <img src="https://picsum.photos/id/35/1200/800" alt="">
-        </a>
-        <a href="https://picsum.photos/id/85/1200/800">
+        </span>
+        <span class='zoom'>
             <img src="https://picsum.photos/id/85/1200/800" alt="">
-        </a>
+        </span>
     </div>
     <script>
-        $(function(){
-            $('a img').zoom({
-                url: 'https://picsum.photos/id/35/1200/800'
+        $(function () {
+            $('.zoom').zoom({
+                on: 'toggle'//click,grab,toggle
             });
         })
     </script>
 </body>
+
 </html>
