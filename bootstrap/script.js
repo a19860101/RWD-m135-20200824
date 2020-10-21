@@ -1,4 +1,5 @@
 $(function(){
+    new WOW().init();
     $('.main-nav').find('.nav-link').click(function(e){
         let target = $(this).data('target');
         console.log(target);
