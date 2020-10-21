@@ -14,4 +14,14 @@ $(function(){
         })
         e.preventDefault();
     })
+    $(window).scroll(function(){
+        let h = $(this).scrollTop();
+        console.log(h)
+        if(h > 700){
+            $('#gotop').fadeIn();
+        }else{
+            $('#gotop').fadeOut();
+        }
+    })
+
 })
