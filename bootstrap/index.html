@@ -64,10 +64,10 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Login</a>
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#login">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Register</a>
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#register">Register</a>
                 </li>
             </ul>
         </div>
@@ -572,7 +572,68 @@
             </div>
         </div>
     </div>
-
+    <div class="modal fade" id="login" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="user">帳號</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="pw">密碼</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <input type="submit" value="登入" class="btn btn-primary">
+                        <input type="button" value="取消" class="btn btn-danger" data-dismiss="modal">
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="register" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="mail">Mail</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="user">帳號</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="pw">密碼</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <input type="submit" value="申請" class="btn btn-primary">
+                        <input type="button" value="取消" class="btn btn-danger" data-dismiss="modal">
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
