@@ -8,4 +8,10 @@ $(function(){
         })
         e.preventDefault();
     })
+    $('#gotop').click(function(e){
+        $('html,body').animate({
+            scrollTop:0
+        })
+        e.preventDefault();
+    })
 })
